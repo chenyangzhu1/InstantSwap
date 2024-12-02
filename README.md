@@ -31,7 +31,7 @@ Finally, we establish a benchmark dataset to facilitate comprehensive evaluation
 - **[2024.12.2]** 🔥 Release Paper and Project page!
 
 ## 🚧 Todo
-
+We are working hard to clean up the code and will open source it as soon as we get permission.
 - [ ] Inference Code
 - [ ] Evaluation Code
 

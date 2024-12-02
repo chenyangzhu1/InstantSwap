@@ -28,7 +28,7 @@ Finally, we establish a benchmark dataset to facilitate comprehensive evaluation
 
 ## 📣 Updates
 
-- **[TODO]** 🔥 Release Paper and Project page!
+- **[2024.12.2]** 🔥 Release Paper and Project page!
 
 ## Results 🎉
 

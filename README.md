@@ -30,6 +30,11 @@ Finally, we establish a benchmark dataset to facilitate comprehensive evaluation
 
 - **[2024.12.2]** 🔥 Release Paper and Project page!
 
+## 🚧 Todo
+
+- [ ] Inference Code
+- [ ] Evaluation Code
+
 ## Results 🎉
 
 More results can be found in our [Project page](https://instantswap.github.io/).
@@ -40,7 +45,7 @@ More results can be found in our [Project page](https://instantswap.github.io/).
 
 ## Acknowledgement 🙏
 
-This repository borrows heavily from [Prompt-to-prompt](https://github.com/google/prompt-to-prompt) and 🤗[Diffusers](https://huggingface.co/docs/diffusers/main/en/index). Thanks to the authors for sharing their code and models.
+This repository borrows heavily from [Prompt-to-prompt](https://github.com/google/prompt-to-prompt), [PnP Inversion](https://github.com/cure-lab/PnPInversion) and 🤗[Diffusers](https://huggingface.co/docs/diffusers/main/en/index). Thanks to the authors for sharing their code and models.
 
 ## Contact ✉️
 This is the codebase for our research work. We are still working hard to update this repo, and more details are coming in days. If you have any questions or ideas to discuss, feel free to contact [Chenyang Zhu](chenyangzhu.cs@gmail.com).

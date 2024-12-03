@@ -5,7 +5,7 @@
 
 <strong>Arxiv 2024</strong>
 
-<a href='https://arxiv.org/abs/TODO'><img src='https://img.shields.io/badge/ArXiv-TODO-red'></a>
+<a href='https://arxiv.org/abs/2412.01197'><img src='https://img.shields.io/badge/ArXiv-2412.01197-red'></a>
 <a href='https://instantswap.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 
 <!-- ![visitors](https://visitor-badge.laobi.icu/badge?page_id=chenyangzhu1.InstantSwap) -->
@@ -42,6 +42,17 @@ More results can be found in our [Project page](https://instantswap.github.io/).
 ![results](figs/quality_comparison-small.jpg "compare")
 
 ## Citation 📄
+```bibtex
+@misc{zhu2024instantswapfastcustomizedconcept,
+      title={InstantSwap: Fast Customized Concept Swapping across Sharp Shape Differences}, 
+      author={Chenyang Zhu and Kai Li and Yue Ma and Longxiang Tang and Chengyu Fang and Chubin Chen and Qifeng Chen and Xiu Li},
+      year={2024},
+      eprint={2412.01197},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.01197}, 
+}
+```
 
 ## Acknowledgement 🙏
 

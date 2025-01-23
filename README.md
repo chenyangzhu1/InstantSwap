@@ -3,7 +3,7 @@
 
 [Chenyang Zhu](https://chenyangzhu1.github.io/), [Kai Li](https://kailigo.github.io/), [Yue Ma](https://mayuelala.github.io/), [Longxiang Tang](https://github.com/chenyangzhu1/InstantSwap), [Chengyu Fang](https://chunminghe.github.io/), [Chubin Chen](https://github.com/chenyangzhu1/InstantSwap), [Qifeng Chen](https://cqf.io/) and [Xiu Li](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=zh-CN&oi=sra)
 
-<strong>Arxiv 2024</strong>
+<strong>ICLR 2025</strong>
 
 <a href='https://arxiv.org/abs/2412.01197'><img src='https://img.shields.io/badge/ArXiv-2412.01197-red'></a>
 <a href='https://instantswap.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
@@ -28,6 +28,7 @@ Finally, we establish a benchmark dataset to facilitate comprehensive evaluation
 
 ## 📣 Updates
 
+- **[2025.1.23]** 🔥 InstantSwap is accepted by ICLR 2025!
 - **[2024.12.2]** 🔥 Release Paper and Project page!
 
 ## 🚧 Todo

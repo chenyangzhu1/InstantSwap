@@ -99,7 +99,7 @@ python InstantSwap.py \
 ```
 
 ## ConSwapBench 🧾
-You can download and use the complete [ConceptBench](https://huggingface.co/datasets/zcaoyao/ConSwapBench).
+You can download and use the complete [ConSwapBench](https://huggingface.co/datasets/zcaoyao/ConSwapBench).
 
 ## Results 🎉
 

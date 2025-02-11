@@ -294,7 +294,6 @@ def image_optimization(
         image_target = image_source.clone()
         embedding_null = get_text_embeddings(pipeline, "")
         embedding_text = get_text_embeddings(pipeline, text_source)
-        # print(embedding_text)
         embedding_source = torch.stack([embedding_null, embedding_text], dim=1)
 
     image_target.requires_grad = True
@@ -305,7 +304,6 @@ def image_optimization(
     timestep_list = sample_and_sort(100, 500, num_iters, z_taregt)
 
     file_pairs = []
-    # for i in range(num_iters):
     for i in tqdm(range(num_iters)):
         cross_data, self_data = rds_loss.get_bgm_loss(
             z_source,
@@ -330,7 +328,6 @@ def image_optimization(
     for cross_attn, self_attn in file_pairs:
         cross_256 = []
         self_256 = []
-        # print(len(cross_attn))
         for tensor in cross_attn:
             if tensor.shape[1] == 256:
                 cross_256.append(tensor.reshape(-1, 16 * 16, 77))

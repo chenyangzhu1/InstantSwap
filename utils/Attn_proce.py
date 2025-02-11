@@ -79,12 +79,6 @@ class MyAttnProcessor:
             value = attn.head_to_batch_dim(value)
 
             attention_probs = attn.get_attention_scores(query, key, attention_mask)
-            """
-            使用self Attention 传来的Hidden states 
-            只修改region部分
-            torch.Size([2, 4096, 320])  torch.Size([10, 4096, 64])
-            """
-            # hidden_states = torch.bmm(attention_probs, value) 
             hidden_states=attn.head_to_batch_dim(hidden_states)
 
             seq_lens = query.shape[1] # 9216  4096

@@ -7,8 +7,7 @@
 
 <a href='https://arxiv.org/abs/2412.01197'><img src='https://img.shields.io/badge/ArXiv-2412.01197-red'></a>
 <a href='https://instantswap.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-
-<!-- ![visitors](https://visitor-badge.laobi.icu/badge?page_id=chenyangzhu1.InstantSwap) -->
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=chenyangzhu1.InstantSwap)
 
 </div>
 
@@ -28,13 +27,79 @@ Finally, we establish a benchmark dataset to facilitate comprehensive evaluation
 
 ## 📣 Updates
 
+- **[2025.2.11]** 🔥 Release the Inference Code and ConSwapBench.
 - **[2025.1.23]** 🔥 InstantSwap is accepted by ICLR 2025!
 - **[2024.12.2]** 🔥 Release Paper and Project page!
 
 ## 🚧 Todo
 We are working hard to clean up the code and will open source it as soon as we get permission.
-- [ ] Inference Code
-- [ ] Evaluation Code
+- [x] Release Inference Code
+- [x] Release ConSwapBench
+- [ ] Release Evaluation Code
+
+## 🚩 Getting Started
+
+Next, this repo will show you how to use InstantSwap to swap the shell 🐚 in your hand with a beautiful flower🌹.
+The example image is in the `example` folder, which is downloaded from [Unsplash](https://unsplash.com/photos/a-hand-holding-a-rock-near-the-ocean-XT4iRGoIAwQ).
+
+The following is a step-by-step guide:
+
+### ⚙️ Environment Setup
+You can run this [bash script][setup] or use the following command to obtain the bounding box of the image.
+```shell
+conda create -n ISwap python=3.9
+conda activate ISwap
+pip install -r requirements.txt
+```
+
+### 1. Customized Concept Learning
+
+The new subject will be integrated as a novel token (e.g. `sks`) within the diffusion model. Users can either utilize the [DreamBooth scripts](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth) to learn the new concept or directly download the [checkpoint](https://huggingface.co/zcaoyao/Flower_Concept) for the flower concept.
+
+### 2. Obtain bbox (optional)
+
+
+You can run this [bash script][get_bbox] or use the following command to obtain the bounding box of the image.
+
+```shell
+export MODLE="stabilityai/stable-diffusion-2-1-base"
+export SOURCE_IMAGE="./example_image.jpg"
+export OUTPUT_DIR="./example"
+python get_bbox.py \
+    --model_id $MODLE \
+    --source_image $SOURCE_IMAGE \
+    --source_prompt "a person holding a shell in front of the ocean" \
+    --guidance_scale 3 \
+    --word_idx 5 \
+    --output $OUTPUT_DIR \
+    --iters 3
+```
+
+### 3. Run InstantSwap
+
+Finally, you can run this [bash script][InstantSwap] or use the following command to swap the shell in your hand for a flower.
+
+```shell
+export MODLE="path/to/the/Flower_Concept_Model"
+export SOURCE_MASK="./example/bbox.jpg"
+export SOURCE_IMAGE="./example/example_image.jpg"
+export OUTPUT_DIR="./example/flower"
+python InstantSwap.py \
+    --model_id $MODLE \
+    --source_mask $SOURCE_MASK \
+    --source_image $SOURCE_IMAGE \
+    --source_prompt "a person holding a shell in front of the ocean" \
+    --target_prompt "a person holding a sks flower in front of the ocean" \
+    --diff_prompt "sks flower" \
+    --diff_prompt_source "shell" \
+    --guidance_scale 7.5 \
+    --output $OUTPUT_DIR \
+    --interval 5 \
+    --iters 550
+```
+
+## ConSwapBench 🧾
+You can download and use the complete [ConceptBench](https://huggingface.co/datasets/zcaoyao/ConSwapBench).
 
 ## Results 🎉
 
@@ -44,20 +109,17 @@ More results can be found in our [Project page](https://instantswap.github.io/).
 
 ## Citation 📄
 ```bibtex
-@misc{zhu2024instantswapfastcustomizedconcept,
-      title={InstantSwap: Fast Customized Concept Swapping across Sharp Shape Differences}, 
-      author={Chenyang Zhu and Kai Li and Yue Ma and Longxiang Tang and Chengyu Fang and Chubin Chen and Qifeng Chen and Xiu Li},
-      year={2024},
-      eprint={2412.01197},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.01197}, 
+@article{zhu2024instantswap,
+  title={Instantswap: Fast customized concept swapping across sharp shape differences},
+  author={Zhu, Chenyang and Li, Kai and Ma, Yue and Tang, Longxiang and Fang, Chengyu and Chen, Chubin and Chen, Qifeng and Li, Xiu},
+  journal={arXiv preprint arXiv:2412.01197},
+  year={2024}
 }
 ```
 
 ## Acknowledgement 🙏
 
-This repository borrows heavily from [Prompt-to-prompt](https://github.com/google/prompt-to-prompt), [PnP Inversion](https://github.com/cure-lab/PnPInversion) and 🤗[Diffusers](https://huggingface.co/docs/diffusers/main/en/index). Thanks to the authors for sharing their code and models.
+This repository borrows heavily from [Prompt-to-prompt](https://github.com/google/prompt-to-prompt) and 🤗[Diffusers](https://huggingface.co/docs/diffusers/main/en/index). Thanks to the authors for sharing their code and models.
 
 ## Contact ✉️
 This is the codebase for our research work. We are still working hard to update this repo, and more details are coming in days. If you have any questions or ideas to discuss, feel free to contact [Chenyang Zhu](chenyangzhu.cs@gmail.com).

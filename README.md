@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 ### 1. Customized Concept Learning
 
-The new subject will be integrated as a novel token (e.g. `sks`) within the diffusion model. Users can either utilize the [DreamBooth scripts](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth) to learn the new concept or directly download the [checkpoint](https://huggingface.co/zcaoyao/Flower_Concept) for the flower concept.
+The new subject will be integrated as a novel token (e.g. `sks`) within the diffusion model. Users can either utilize the [DreamBooth scripts](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth) to learn the new concept or directly download the [checkpoint](https://huggingface.co/datasets/zcaoyao/Flower_Concept) for the flower concept.
 
 ### 2. Obtain bbox (optional)
 
